@@ -231,5 +231,21 @@ All communication between clients and the server will be encrypted via HTTPS to 
 **Why it matters:**  
 Ensures all data transmitted between users and the backend is secure and not intercepted.
 
--
+## ⚙️ CI/CD Pipeline
+
+**CI/CD (Continuous Integration and Continuous Deployment)** is a development practice that automates the process of testing, building, and deploying code. It ensures that code changes are consistently integrated, automatically tested, and quickly delivered to production or staging environments.
+
+### Why CI/CD Matters
+- **Faster Development:** Automates repetitive tasks like testing and deployment, allowing developers to focus on building features.
+- **Improved Code Quality:** Ensures all changes are automatically tested, reducing bugs and integration issues.
+- **Team Collaboration:** Makes it easier for multiple developers to work on the same codebase with less conflict and more confidence.
+- **Faster Feedback:** Developers receive quick feedback if something breaks after a code push.
+
+### Tools We Can Use
+- **GitHub Actions:** Automates workflows directly from our GitHub repo, such as running tests or deploying on push.
+- **Docker:** Ensures consistent environments across development, testing, and production.
+- **Heroku / Vercel / Render:** For automated deployments of backend and frontend apps.
+- **PostgreSQL & Django Migrations:** Integrated in the CI process to apply database changes safely and consistently.
+
+
 
