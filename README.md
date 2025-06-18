@@ -181,4 +181,55 @@ Provides administrators with tools to monitor activity, manage users or listings
 ### 8. Responsive UI
 Ensures the platform works seamlessly across all devices (mobile, tablet, desktop). A responsive design enhances usability and accessibility for all users.
 
+## 🔐 API Security
+
+Securing backend APIs is critical to protect user data, prevent misuse, and maintain trust in the platform. Below are the key security measures that will be implemented in the Airbnb Clone Project:
+
+### 1. Authentication
+Only verified users can access protected endpoints using token-based authentication (e.g., JWT). This ensures that only real, logged-in users can interact with the platform.
+
+**Why it matters:**  
+Authentication prevents unauthorized access to sensitive features such as booking, payments, and personal data.
+
+---
+
+### 2. Authorization
+Determines what actions a user is allowed to perform (e.g., only a host can edit their own listings). Role-based access control (RBAC) ensures users can only perform actions within their permissions.
+
+**Why it matters:**  
+Authorization protects resources from being modified or accessed by the wrong users, such as preventing a guest from deleting a host’s property.
+
+---
+
+### 3. Rate Limiting
+Limits the number of requests a client can make in a specific time period. This helps prevent abuse, brute-force attacks, and DoS (Denial of Service) attacks.
+
+**Why it matters:**  
+Protects server resources, maintains app stability, and prevents malicious users from overwhelming the API.
+
+---
+
+### 4. Input Validation & Sanitization
+All inputs are validated and sanitized to prevent injection attacks (e.g., SQL injection, XSS). Data received from users is treated cautiously.
+
+**Why it matters:**  
+Prevents attackers from injecting harmful scripts or commands that could compromise the system or steal data.
+
+---
+
+### 5. Secure Payments Handling
+Uses secure third-party payment gateways (e.g., Stripe, PayPal) that support HTTPS and tokenized transactions.
+
+**Why it matters:**  
+Protects users’ financial information and ensures payment processes are encrypted and compliant with industry standards.
+
+---
+
+### 6. HTTPS Enforcement
+All communication between clients and the server will be encrypted via HTTPS to prevent eavesdropping and man-in-the-middle attacks.
+
+**Why it matters:**  
+Ensures all data transmitted between users and the backend is secure and not intercepted.
+
+-
 
