@@ -60,3 +60,96 @@ Though GraphQL is used for flexibility, RESTful principles may still be applied 
 ### 9. Redis (optional)
 Used for caching, session storage, or as a message broker to speed up backend operations and improve performance.
 
+
+## 🗂️ Database Design
+
+This section outlines the core entities and relationships that define the Airbnb Clone database structure.
+
+### 1. Users
+Represents individuals using the platform, either as guests or hosts.
+
+**Key Fields:**
+- `id`: unique identifier
+- `name`: full name of the user
+- `email`: user’s email address
+- `password`: hashed password
+- `role`: guest or host
+
+**Relationships:**
+- A user can own multiple properties.
+- A user can make multiple bookings.
+- A user can leave multiple reviews.
+
+---
+
+### 2. Properties
+Represents listings available for rent.
+
+**Key Fields:**
+- `id`: unique identifier
+- `title`: property name or title
+- `description`: detailed info about the property
+- `location`: address or coordinates
+- `price_per_night`: cost per night
+
+**Relationships:**
+- A property belongs to one user (the host).
+- A property can have many bookings and reviews.
+
+---
+
+### 3. Bookings
+Represents a reservation made by a user for a property.
+
+**Key Fields:**
+- `id`: unique identifier
+- `user_id`: reference to the user who booked
+- `property_id`: reference to the booked property
+- `start_date`: check-in date
+- `end_date`: check-out date
+
+**Relationships:**
+- A booking belongs to one user and one property.
+- A booking may have one associated payment.
+
+---
+
+### 4. Reviews
+Captures feedback given by users after a stay.
+
+**Key Fields:**
+- `id`: unique identifier
+- `user_id`: reference to the reviewer
+- `property_id`: reference to the reviewed property
+- `rating`: numerical score
+- `comment`: written feedback
+
+**Relationships:**
+- A review belongs to one user and one property.
+
+---
+
+### 5. Payments
+Handles transaction details for bookings.
+
+**Key Fields:**
+- `id`: unique identifier
+- `booking_id`: reference to the booking
+- `amount`: total cost
+- `status`: completed, pending, failed
+- `payment_method`: card, PayPal, etc.
+
+**Relationships:**
+- A payment is linked to one booking.
+
+---
+
+### 🔄 Entity Relationships Summary
+- A **User** can own many **Properties**
+- A **User** can make many **Bookings**
+- A **Property** can have many **Bookings** and **Reviews**
+- A **Booking** belongs to one **User** and one **Property**
+- A **Review** belongs to one **User** and one **Property**
+- A **Payment** is linked to one **Booking**
+
+
