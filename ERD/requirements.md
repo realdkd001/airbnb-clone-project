@@ -15,7 +15,7 @@ Design a normalized and scalable database schema for an Airbnb-style platform. T
 
 ##  Entity Relationship Diagram (ERD)
 
-![ERD](./images/ERD.png)
+![ERD](./ERD.png)
 
 >  This ERD visualizes all relationships and constraints across the system including users, properties, bookings, payments, and messaging.
 
